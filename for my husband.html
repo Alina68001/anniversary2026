@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Husband ❤️</title>
+
+<style>
+
+body {
+    margin:0;
+    min-height:100vh;
+    background:linear-gradient(135deg,#fff8ef,#f3dfd2);
+    font-family:Georgia,serif;
+    color:#4b3028;
+}
+
+.container {
+    max-width:650px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.envelope {
+    font-size:80px;
+    animation:float 2s infinite;
+}
+
+@keyframes float {
+    50% {transform:translateY(-10px);}
+}
+
+h1 {
+    color:#9b6b35;
+    font-size:34px;
+    font-weight:normal;
+}
+
+p {
+    font-size:18px;
+    line-height:1.6;
+}
+
+input {
+    padding:15px;
+    width:220px;
+    border-radius:30px;
+    border:1px solid #cda66a;
+    text-align:center;
+    font-size:18px;
+}
+
+button {
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#b88a4a;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#certificate {
+    display:none;
+}
+
+.card {
+    background:white;
+    border:1px solid #d8b878;
+    border-radius:25px;
+    padding:25px;
+    margin:20px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.service {
+    font-size:21px;
+}
+
+.points {
+    color:#a36f2d;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.final {
+    margin-top:40px;
+    font-size:20px;
+}
+
+.signature {
+    color:#a36f2d;
+    font-size:26px;
+}
+
+.error {
+    color:#a94442;
+    margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="lock">
+
+<div class="envelope">
+💌
+</div>
+
+<h1>
+У тебя новое послание ❤️
+</h1>
+
+<p>
+Чтобы открыть подарок,<br>
+введи наш важный день 
+</p>
+
+<input 
+id="password"
+placeholder="Наша дата">
+
+<br>
+
+<button onclick="unlock()">
+Открыть 💕
+</button>
+
+<div class="error" id="error"></div>
+
+</div>
+
+<div id="certificate">
+
+<h1>
+👑 Love Privilege Card
+</h1>
+
+<p>
+Этот сертификат принадлежит самому любимому мужу ❤️
+</p>
+
+<div class="card">
+<div class="service">💆‍♂️ 30-минутный массаж</div>
+<div class="points">5 баллов</div>
+</div>
+
+<div class="card">
+<div class="service">💃 Танец под музыку с раздеванием</div>
+<div class="points">8 баллов</div>
+</div>
+
+<div class="card">
+<div class="service">☕ Завтрак в постель</div>
+<div class="points">4 балла</div>
+</div>
+
+<div class="card">
+<div class="service">✨ Свидание-сюрприз</div>
+<div class="points">6 баллов</div>
+</div>
+
+<div class="card">
+<div class="service">🍝 Любимое блюдо по твоему желанию</div>
+<div class="points">5 баллов</div>
+</div>
+
+<div class="card">
+<div class="service">👑 Любое желание</div>
+<div class="points">11 баллов</div>
+</div>
+
+<div class="final">
+
+Спасибо, что ты мой человек.<br>
+
+Я выбираю тебя снова и снова ❤️
+
+<br><br>
+
+<span class="signature">
+Твоя жена
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function unlock(){
+
+let password=document.getElementById("password").value;
+
+if(password==="07072018"){
+
+document.getElementById("lock").style.display="none";
+document.getElementById("certificate").style.display="block";
+
+}
+
+else{
+
+document.getElementById("error").innerHTML=
+"Попробуй еще раз ❤️";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
